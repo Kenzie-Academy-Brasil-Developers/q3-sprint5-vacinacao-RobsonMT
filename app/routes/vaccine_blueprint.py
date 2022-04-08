@@ -1,8 +1,8 @@
 from flask import Blueprint
 
-from app.controllers import vaccine_controller
+from app.controllers import vaccine_card_controller
 
-bp = Blueprint("vaccine", __name__, url_prefix="/vaccine")
+bp = Blueprint("vaccinations", __name__, url_prefix="/vaccinations")
 
-bp.get("")(vaccine_controller.create_vaccine)
-bp.post("")(vaccine_controller.retrieve_vaccines)
+bp.post("")(vaccine_card_controller.create_vaccine_card)
+bp.get("")(vaccine_card_controller.retrieve_vaccine_cards)

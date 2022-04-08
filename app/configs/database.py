@@ -2,7 +2,6 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 import os
 
-# Singleton
 db = SQLAlchemy()
 
 
@@ -15,8 +14,6 @@ def init_app(app: Flask):
 
     app.db = db
 
-    from app.models.vaccine_model import Vaccine
-
-    db.create_all(app=app)
+    from app.models.vaccine_card_model import VaccineCard
 
     return app
