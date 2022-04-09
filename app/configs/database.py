@@ -14,6 +14,4 @@ def init_app(app: Flask):
 
     app.db = db
 
-    from app.models.vaccine_card_model import VaccineCard
-
     return app

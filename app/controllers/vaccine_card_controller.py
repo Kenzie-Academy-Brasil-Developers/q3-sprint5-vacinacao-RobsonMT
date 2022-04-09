@@ -1,6 +1,4 @@
-from curses import keyname
 from http import HTTPStatus
-from multiprocessing.sharedctypes import Value
 from flask import request, jsonify
 
 from sqlalchemy.exc import IntegrityError
@@ -21,7 +19,7 @@ def create_vaccine_card():
         "cpf": data["cpf"],
         "name": data["name"],
         "vaccine_name": data["vaccine_name"],
-        "health_unit_name": data["health_unit_name"]
+        "health_unit_name": data["health_unit_name"],
     }
 
     try:
