@@ -1,4 +1,5 @@
 from flask import Blueprint, Flask
+
 from app.routes.vaccine_blueprint import bp as bp_vaccine
 
 bp_api = Blueprint("api", __name__, url_prefix="/api")
